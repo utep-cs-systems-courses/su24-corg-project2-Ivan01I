@@ -1,0 +1,10 @@
+#ifndef sound_included
+#define sound_included
+
+#define NA 1635
+#define NB 1732
+#define NC 1835
+#define ND 1945
+#define NE 2060
+
+#endif

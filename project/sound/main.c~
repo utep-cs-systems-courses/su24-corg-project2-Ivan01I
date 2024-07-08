@@ -1,0 +1,21 @@
+#include <msp430.h>
+#include "libTimer.h"
+#include "make_sound.h"
+
+void play_song() {
+    buzzer_set_period(1000);  // Adjust frequencies and durations 3000
+    __delay_cycles(300000);   // Adjust delays between notes 500000
+    buzzer_set_period(1500);  // 2500
+    __delay_cycles(500000);   // 500000
+    buzzer_set_period(1000);  // 2000
+    __delay_cycles(400000);   // 500000
+}
+
+int main() {
+    configureClocks();
+    buzzer_init();
+
+    while (1) {
+        play_song();
+    }
+}
